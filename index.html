@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    
+    
+    <div class="password-generator">
+        <div class="input">
+            <input type="text" value="password" id="result" readonly class="password-inpu">
+            <button class="copy" id="copybutton">COPY</button>
+           
+        </div>
+
+        <label for="password-length">Password Length:</label >
+        
+        <input type="range" name="password-length" id="password-length" min="8" max="32" value="8"
+        oninput="this.nextElementSibling.value = this.value" class="password-lengths">
+        
+        <output id="eigth">8</output>
+
+        <div class="checkbox" id="option">
+            <label class="button-one"> 
+                <input type="checkbox" id="lower-option"> <span>Lower (a-z)</span>
+            </label>
+            
+            <label  class="button-one"> 
+                <input type="checkbox" id="upper-option"> 
+                <span>Upper(A-Z)</span>
+                
+            </label>
+            
+            <label  class="button-one"> 
+                <input type="checkbox" id="number-option" > 
+                <span>Number(0-9)</span>
+                
+            </label>
+            
+            <label class="button-one"> 
+                <input type="checkbox" id="symbol-option"> 
+                <span>Symbol(!@#$%)</span>
+            </label>
+        </div>
+
+        <div>
+            <button class="generates" id="generate-button">Generate</button>
+        </div>
+    </div>
+
+    <script src="password-generator.js"></script>
+</body>
+</html>
